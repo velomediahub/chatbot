@@ -1,11 +1,119 @@
 body {
     font-family: Arial, sans-serif;
     background-color: #f0f2f5;
+    margin: 0;
+    line-height: 1.6;
+    color: #333;
+}
+
+header {
+    background-color: #007bff;
+    color: #ffffff;
+    padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.site-title {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #e0e0e0;
+}
+
+.hero {
+    background-color: #f8f9fa;
+    padding: 60px 20px;
+    text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    margin: 0;
+    gap: 40px;
+    flex-wrap: wrap;
+    min-height: 400px; /* Ensure hero section has a minimum height */
+}
+
+.hero-content {
+    max-width: 500px;
+    text-align: left;
+}
+
+.hero h1 {
+    font-size: 3em;
+    color: #007bff;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2em;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.button {
+    display: inline-block;
+    background-color: #28a745;
+    color: #ffffff;
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #218838;
+}
+
+.chat-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    background-color: #f0f2f5;
 }
 
 .chat-container {
@@ -108,4 +216,153 @@ body {
 
 .chat-input button:hover {
     background-color: #0056b3;
+}
+
+/* Styles for new pages (Services and Contact) */
+.page-hero {
+    background-color: #007bff;
+    color: #ffffff;
+    padding: 60px 20px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.page-hero h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+.page-hero p {
+    font-size: 1.2em;
+    opacity: 0.9;
+}
+
+.content-section {
+    max-width: 1200px;
+    margin: 0 auto 40px auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.service-item {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    text-align: center;
+}
+
+.service-item h2 {
+    color: #007bff;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.service-item ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 15px;
+}
+
+.service-item ul li {
+    margin-bottom: 8px;
+    color: #555;
+}
+
+.contact-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 40px;
+    max-width: 900px;
+}
+
+.contact-details,
+.contact-form {
+    flex: 1;
+    min-width: 300px;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.contact-details h2,
+.contact-form h2 {
+    color: #007bff;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.contact-details p {
+    margin-bottom: 10px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        margin-top: 15px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-content {
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 2.5em;
+    }
+
+    .hero p {
+        font-size: 1em;
+    }
+
+    .content-section {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-info {
+        flex-direction: column;
+    }
 }

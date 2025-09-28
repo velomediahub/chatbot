@@ -3,23 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SF Credit Union Chatbot</title>
+    <title>SF Credit Union</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="chat-container">
-        <div class="chat-header">
-            <img src="https://via.placeholder.com/40" alt="SF Credit Union Logo" class="logo">
-            <h2>SF Credit Union Bot</h2>
+    <header>
+        <nav>
+            <div class="logo-container">
+                <img src="https://via.placeholder.com/40" alt="SF Credit Union Logo" class="logo">
+                <a href="index.html" class="site-title">SF Credit Union</a>
+            </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Your Trusted Partner in Banking</h1>
+            <p>Secure your financial future with SF Credit Union. Personal, clean, and always here for you.</p>
+            <a href="#chat-section" class="button">Chat with Us</a>
         </div>
-        <div class="chat-window" id="chat-window">
-            <!-- Chat messages will appear here -->
+        <div class="hero-image">
+            <img src="https://via.placeholder.com/600x400?text=Banking+Image" alt="Banking Image">
         </div>
-        <div class="chat-input">
-            <input type="text" id="user-input" placeholder="Ask a banking question...">
-            <button id="send-button">Send</button>
+    </section>
+
+    <section id="chat-section" class="chat-section">
+        <div class="chat-container">
+            <div class="chat-header">
+                <img src="https://via.placeholder.com/40" alt="SF Credit Union Logo" class="logo">
+                <h2>SF Credit Union Bot</h2>
+            </div>
+            <div class="chat-window" id="chat-window">
+                <!-- Chat messages will appear here -->
+            </div>
+            <div class="chat-input">
+                <input type="text" id="user-input" placeholder="Ask a banking question...">
+                <button id="send-button">Send</button>
+            </div>
         </div>
-    </div>
+    </section>
+
     <script src="script.js"></script>
 </body>
 </html>
